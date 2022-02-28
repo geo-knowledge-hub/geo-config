@@ -32,5 +32,5 @@ class GEOConfig(object):
                 app.config["BASE_TEMPLATE"],
             )
         for k in dir(config):
-            if k.startswith("GEO_CONFIG_"):
+            if k.startswith("GEO_CONFIG_") or k.startswith("RDM_PERMISSION_POLICY"):
                 app.config.setdefault(k, getattr(config, k))
