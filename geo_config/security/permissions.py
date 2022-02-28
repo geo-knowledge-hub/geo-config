@@ -80,7 +80,7 @@ def need_permission(action: str):
         @wraps(f)
         def decorate(*args, **kwargs):
             check_permission(
-                current_app.config["GEO_KNOWLEDGE_HUB_VIEW_PERMISSIONS_FACTORY"](action)
+                current_app.config["GEO_CONFIG_VIEW_PERMISSIONS_FACTORY"](action)
             )
             return f(*args, **kwargs)
 
