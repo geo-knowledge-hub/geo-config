@@ -73,9 +73,6 @@ setup(
         "invenio_base.apps": [
             "geo_config = geo_config:GEOConfig",
         ],
-        "invenio_base.blueprints": [
-            "geo_config = geo_config.views:blueprint",
-        ],
         "invenio_i18n.translations": [
             "messages = geo_config",
         ],
