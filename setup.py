@@ -35,7 +35,7 @@ setup_requires = [
 
 install_requires = [
     "invenio-i18n>=1.2.0",
-    "invenio-rdm-records>=0.33.12,<0.34.0",
+    "invenio-rdm-records<0.33.0,>=0.32.6",
 ]
 
 packages = find_packages()
