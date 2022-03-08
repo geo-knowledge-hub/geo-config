@@ -10,4 +10,7 @@
 from .ext import GEOConfig
 from .version import __version__
 
-__all__ = ('__version__', 'GEOConfig')
+__all__ = (
+    "__version__",
+    "GEOConfig",
+)

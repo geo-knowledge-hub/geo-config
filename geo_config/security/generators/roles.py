@@ -38,6 +38,3 @@ class GeoCommunity(Generator):
 
     def needs(self, **kwargs):
         return [geo_community_access_action]
-
-
-__all__ = ("GeoCommunity", "GeoSecretariat", "GeoKnowledgeProvider")
