@@ -29,10 +29,3 @@ def test_init():
     assert 'geo-config' not in app.extensions
     ext.init_app(app)
     assert 'geo-config' in app.extensions
-
-
-def test_view(base_client):
-    """Test view."""
-    res = base_client.get("/")
-    assert res.status_code == 200
-    assert 'Welcome to geo-config' in str(res.data)
