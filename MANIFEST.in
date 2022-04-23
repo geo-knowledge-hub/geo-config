@@ -25,8 +25,8 @@ recursive-include docs *.rst
 recursive-include docs Makefile
 recursive-include examples *.py
 recursive-include examples *.sh
-recursive-include invenio_rdm_records *.po *.pot *.mo
-recursive-include invenio_rdm_records *.yaml
+recursive-include geo_config *.po *.pot *.mo
+recursive-include geo_config *.yaml
 recursive-include tests *.py *.csv *.json *.yaml
 
 # added by check-manifest
