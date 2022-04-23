@@ -5,12 +5,13 @@
 # geo-config is free software; you can redistribute it and/or modify it under
 # the terms of the MIT License; see LICENSE file for more details.
 
+"""GEO Config conditional generators."""
+
 from abc import ABC, abstractmethod
+from itertools import chain
 
 from invenio_records.dictutils import dict_lookup
 from invenio_records_permissions.generators import Generator
-
-from itertools import chain
 
 
 class BaseConditionalGenerator(ABC, Generator):
@@ -22,7 +23,6 @@ class BaseConditionalGenerator(ABC, Generator):
 
     def needs(self, record=None, **kwargs):
         """Needs to granting permission."""
-
         # in the chain above is checked if the
         # ``g`` has ``needs``. In this case is assumed
         # that ``g`` is a ``Generator``. Otherwise, is
@@ -41,6 +41,7 @@ class BaseConditionalGenerator(ABC, Generator):
 
 class IfIsEqual(BaseConditionalGenerator):
     """IfIsEqual generator.
+
     This conditional generator check if a record attribute is equal a defined value:
         IfIsEqual(
             field    = 'data.status',
@@ -54,6 +55,7 @@ class IfIsEqual(BaseConditionalGenerator):
     """
 
     def __init__(self, field, equal_to, then_, else_):
+        """Initializer."""
         self.field = field
         self.then_ = then_
         self.else_ = else_

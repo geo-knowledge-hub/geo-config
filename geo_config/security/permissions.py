@@ -5,13 +5,13 @@
 # geo-config is free software; you can redistribute it and/or modify it under
 # the terms of the MIT License; see LICENSE file for more details.
 
-"""GEO Knowledge Hub Base Security Policies."""
+"""GEO Config Base Security Policies."""
+
+from functools import wraps
 
 from flask import abort, current_app
 from flask_login import current_user
-
-from functools import wraps
-from invenio_access import action_factory, Permission
+from invenio_access import Permission, action_factory
 
 #
 # Actions
@@ -33,14 +33,17 @@ geo_secretariat_access_action = action_factory("geo-secretariat-access")
 
 
 def community_user_permission():
+    """Community user permission factory."""
     return Permission(geo_community_access_action)
 
 
 def provider_user_permission():
+    """Knowledge Provider user permission factory."""
     return Permission(geo_provider_access_action)
 
 
 def secretariat_user_permission():
+    """Secretariat user permission factory."""
     return Permission(geo_secretariat_access_action)
 
 
@@ -95,6 +98,7 @@ def need_permission(action: str):
 
 
 def views_permissions_factory(action):
+    """View Permission factory."""
     allowed_actions = {
         "geo-provider-access": provider_user_permission(),
         "geo-community-access": community_user_permission(),

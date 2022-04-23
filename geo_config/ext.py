@@ -5,7 +5,7 @@
 # geo-config is free software; you can redistribute it and/or modify it under
 # the terms of the MIT License; see LICENSE file for more details.
 
-"""GEO Knowledge Hub module that provides configuration options about security, environment, and other stuff"""
+"""GEO Config module extension definition."""
 
 from . import config
 

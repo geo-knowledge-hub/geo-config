@@ -7,9 +7,9 @@
 
 """GEO Knowledge Hub Base Security Policies."""
 
-from invenio_records_permissions.generators import SystemProcess
 from invenio_rdm_records.services.generators import RecordOwners
 from invenio_rdm_records.services.permissions import RDMRecordPermissionPolicy
+from invenio_records_permissions.generators import SystemProcess
 
 from geo_config.security.generators import GeoKnowledgeProvider, GeoSecretariat
 

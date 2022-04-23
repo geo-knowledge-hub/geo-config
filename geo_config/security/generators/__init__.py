@@ -5,16 +5,10 @@
 # geo-config is free software; you can redistribute it and/or modify it under
 # the terms of the MIT License; see LICENSE file for more details.
 
-from .roles import (
-    GeoCommunity,
-    GeoSecretariat,
-    GeoKnowledgeProvider,
-)
+"""GEO Config security generators."""
 
-from .conditional import (
-    BaseConditionalGenerator,
-    IfIsEqual,
-)
+from .conditional import BaseConditionalGenerator, IfIsEqual
+from .roles import GeoCommunity, GeoKnowledgeProvider, GeoSecretariat
 
 __all__ = (
     "GeoCommunity",
