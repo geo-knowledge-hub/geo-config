@@ -22,10 +22,13 @@ jobs:
       matrix:
           python-version: [3.7, 3.8, 3.9]
           requirements-level: [pypi]
-          db-service: [postgresql13]
+          db-service: [postgresql12]
           search-service: [elasticsearch7]
+          exclude:
+          - python-version: 3.7
+            search-service: elasticsearch7
           include:
-          - db-service: postgresql13
+          - db-service: postgresql12
             DB_EXTRAS: "postgresql"
 
           - search-service: elasticsearch7
@@ -34,7 +37,7 @@ jobs:
     env:
       DB: ${{ matrix.db-service }}
       SEARCH: ${{ matrix.search-service }}
-      EXTRAS: tests,${{ matrix.SEARCH_EXTRAS }}
+      EXTRAS: all,${{ matrix.DB_EXTRAS }},${{ matrix.SEARCH_EXTRAS }}
     steps:
       - name: Checkout
         uses: actions/checkout@v2
