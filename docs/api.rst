@@ -10,9 +10,3 @@ API Docs
 
 .. automodule:: geo_config.ext
    :members:
-
-Views
------
-
-.. automodule:: geo_config.views
-   :members:
