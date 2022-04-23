@@ -21,8 +21,7 @@ invenio_search_version = ">=1.4.0,<2.0.0"
 tests_require = [
     "pytest-mock>=1.6.0",
     "pytest-invenio>=1.4.0",
-    "invenio-app>=1.3.1,<2.0.0",
-    "invenio-db[postgresql,versioning]{}".format(invenio_db_version),
+    "invenio-app>=1.3.1,<2.0.0"
 ]
 
 extras_require = {
