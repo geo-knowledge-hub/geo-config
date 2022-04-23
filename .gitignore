@@ -25,9 +25,7 @@ var/
 *.egg-info/
 .installed.cfg
 *.egg
-Pipfile
-Pipfile.lock
-pyproject.toml
+.venv/
 
 # PyInstaller
 #  Usually these files are written by a python script from a template
@@ -63,3 +61,18 @@ target/
 
 # Vim swapfiles
 .*.sw?
+
+# Editors
+*.sublime-*
+.vscode/
+
+# pipenv
+# This project is a library and not an application.
+Pipfile
+Pipfile.lock
+
+# pip wheel
+pip-wheel-metadata/
+
+# pyenv
+.python-version
