@@ -17,11 +17,19 @@
 .. image:: https://img.shields.io/badge/code%20style-black-000000.svg
    :target: https://github.com/psf/black
 
+.. image:: https://img.shields.io/badge/lifecycle-maturing-blue.svg
+        :target: https://www.tidyverse.org/lifecycle/#maturing
+        :alt: Software Life Cycle
+
 .. image:: https://img.shields.io/github/license/geo-knowledge-hub/geo-config.svg
         :target: https://github.com/geo-knowledge-hub/geo-config/blob/master/LICENSE
 
 .. image:: https://img.shields.io/github/tag/geo-knowledge-hub/geo-config.svg
         :target: https://github.com/geo-knowledge-hub/geo-config/releases
+
+.. image:: https://img.shields.io/discord/730739436551143514?logo=discord&logoColor=ffffff&color=7389D8
+        :target: https://discord.com/channels/730739436551143514#
+        :alt: Join us at Discord
 
 GEO Knowledge Hub Configuration module to manage security definitions, environment, and other stuff.
 
