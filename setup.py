@@ -49,8 +49,7 @@ for name, reqs in extras_require.items():
         "elasticsearch7",
         "mysql",
         "postgresql",
-        "sqlite",
-        "docs",
+        "sqlite"
     ):
         continue
     extras_require["all"].extend(reqs)
