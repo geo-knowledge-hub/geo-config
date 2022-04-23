@@ -21,7 +21,7 @@ jobs:
     strategy:
       matrix:
           python-version: [3.7, 3.8, 3.9]
-          requirements-level: [pypi]
+          requirements-level: [dev]  # current scenario for the GEO Knowledge Hub
           db-service: [postgresql12]
           search-service: [elasticsearch7]
           exclude:
@@ -52,6 +52,11 @@ jobs:
           pip install wheel requirements-builder
           requirements-builder -e "$EXTRAS" --level=${{ matrix.requirements-level }} setup.py > .${{ matrix.requirements-level }}-${{ matrix.python-version }}-requirements.txt
           cat .${{ matrix.requirements-level }}-${{ matrix.python-version }}-requirements.txt
+      - name: Cache pip
+        uses: actions/cache@v2
+        with:
+          path: ~/.cache/pip
+          key: ${{ runner.os }}-pip-${{ hashFiles('.${{ matrix.requirements-level }}-${{ matrix.python-version }}-requirements.txt') }}
 
       - name: Install dependencies
         run: |
