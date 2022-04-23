@@ -62,7 +62,7 @@ setup_requires = [
 
 install_requires = [
     "invenio-i18n>=1.2.0",
-    "invenio-rdm-records @ git+https://github.com/geo-knowledge-hub/invenio-rdm-records@b-1.0",
+    "geo-rdm-records @ git+https://github.com/geo-knowledge-hub/geo-rdm-records",
 ]
 packages = find_packages()
 
