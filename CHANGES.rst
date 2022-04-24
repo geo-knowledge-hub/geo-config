@@ -7,6 +7,12 @@
 Changes
 =======
 
-Version 0.1.0 (released TBD)
+Version 0.2.0 (2022-04-24)
+--------------------------
 
-- Initial public release.
+- Initial public release
+- Permission generators
+
+  - Conditional-based Generators
+  - Role-based Generators
+- Permissions factory for the GEO Knowledge Hub pages
