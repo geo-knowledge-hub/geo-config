@@ -6,4 +6,4 @@
 # the terms of the MIT License; see LICENSE file for more details.
 #
 
--e git+https://github.com/geo-knowledge-hub/geo-rdm-records.git#egg=geo-rdm-records
+-e git+https://github.com/geo-knowledge-hub/geo-rdm-records.git@v0.2.0#egg=geo-rdm-records
