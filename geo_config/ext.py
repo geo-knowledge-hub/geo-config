@@ -8,6 +8,7 @@
 """GEO Config extension definition."""
 
 from . import config
+from .csrf import csrf_protect_middleware_factory
 
 
 class GEOConfig(object):
@@ -21,7 +22,13 @@ class GEOConfig(object):
     def init_app(self, app):
         """Flask application initialization."""
         self.init_config(app)
+        self.init_security_modules(app)
+
         app.extensions["geo-config"] = self
+
+    def init_security_modules(self, app):
+        """Flask security modules initialization."""
+        csrf_protect_middleware_factory(app)
 
     def init_config(self, app):
         """Initialize configuration."""

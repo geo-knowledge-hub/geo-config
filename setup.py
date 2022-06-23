@@ -46,14 +46,13 @@ extras_require = {
 extras_require["all"] = []
 for name, reqs in extras_require.items():
     if name[0] == ":" or name in (
-        "elasticsearch7",
-        "mysql",
-        "postgresql",
-        "sqlite"
+            "elasticsearch7",
+            "mysql",
+            "postgresql",
+            "sqlite"
     ):
         continue
     extras_require["all"].extend(reqs)
-
 
 setup_requires = [
     "Babel>=2.8",
@@ -65,7 +64,6 @@ install_requires = [
     "geo-rdm-records @ git+https://github.com/geo-knowledge-hub/geo-rdm-records@v0.2.0",
 ]
 packages = find_packages()
-
 
 # Get the version string. Cannot be done with import!
 g = {}
@@ -88,6 +86,12 @@ setup(
     include_package_data=True,
     platforms="any",
     entry_points={
+        "invenio_base.apps": [
+            "geo_config = geo_config:GEOConfig",
+        ],
+        "invenio_base.api_apps": [
+            "geo_config = geo_config:GEOConfig",
+        ],
         "invenio_access.actions": [
             "geo-community-access"
             " = geo_config.security.permissions:geo_community_access_action",
@@ -95,9 +99,6 @@ setup(
             " = geo_config.security.permissions:geo_provider_access_action",
             "geo-secretariat-access"
             " = geo_config.security.permissions:geo_secretariat_access_action",
-        ],
-        "invenio_base.apps": [
-            "geo_config = geo_config:GEOConfig",
         ],
         "invenio_i18n.translations": [
             "messages = geo_config",
