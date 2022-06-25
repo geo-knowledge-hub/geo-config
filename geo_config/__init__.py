@@ -26,11 +26,7 @@ except AttributeError:
 
     security.safe_str_cmp = hmac.compare_digest
 
-
 from .ext import GEOConfig
-from .version import __version__
 
-__all__ = (
-    "__version__",
-    "GEOConfig",
-)
+__version__ = "0.2.0"
+__all__ = ("__version__", "GEOConfig")
