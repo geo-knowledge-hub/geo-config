@@ -7,6 +7,14 @@
 Changes
 =======
 
+Version 0.3.0 (2022-05-29)
+--------------------------
+
+- Dependencies revised
+
+  - `GEO RDM Records <https://github.com/geo-knowledge-hub/geo-rdm-records>`_ was replaced by `Invenio RDM Records (GEO Fork) <https://github.com/geo-knowledge-hub/invenio-rdm-records>`_.
+
+
 Version 0.2.0 (2022-04-24)
 --------------------------
 
